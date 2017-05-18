@@ -1,12 +1,16 @@
 {
   "package": "HuffingtonPostPollster",
   "tagline": "HuffingtonPostPollster API",
-  "description": "",
+  "description": "HuffPost is an American journalism company that has both localized and international editions founded by Arianna Huffington, Kenneth Lerer, Jonah Peretti, and Andrew Breitbart, featuring columnists. The site offers news, satire, blogs, and original content and covers politics, business, entertainment, environment, technology, popular media, lifestyle, culture, comedy, healthy living, women's interests, and local news.",
   "image": "https://logo.clearbit.com/huffingtonpost.com?s=128",
   "repo": "https://github.com/RapidSoftwareSolutions/Marketplace-HuffingtonPostPollster-Package",
-  "keywords": [],
+  "keywords": [
+    "API",
+    "news",
+    "election"
+  ],
   "accounts": {
-    "domain": "google.com",
+    "domain": "http://elections.huffingtonpost.com",
     "credentials": [
     ]
   },
