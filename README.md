@@ -1,10 +1,6 @@
 [![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/HuffingtonPostPollster/functions?utm_source=RapidAPIGitHub_HuffingtonPostPollsterFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)# HuffingtonPostPollster Package
 
 * Domain: [google.com](https://google.com)
-* Credentials: 
-
-## How to get credentials: 
-1. Item one
  
 ## HuffingtonPostPollster.getPolls
 A Poll on Pollster is a collection of questions and responses published by a reputable survey house. This endpoint provides raw data from the survey house, plus Pollster-provided metadata about each question. Pollster editors don’t include every question when they enter Polls, and they don’t necessarily enter every subpopulation for the responses they do enter. They make editorial decisions about which questions belong in the database.
