@@ -54,7 +54,7 @@ $app->post('/api/HuffingtonPostPollster/getCharts', function ($request, $respons
         if (empty($vendorResponseBody)) {
             $result['contextWrites']['to']['status_msg'] = $exception->getResponse()->getReasonPhrase();
         } else {
-            $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+            $result['contextWrites']['to']['status_msg'] = $vendorResponseBody;
         }
     }
 

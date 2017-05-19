@@ -35,13 +35,13 @@ $app->post('/api/HuffingtonPostPollster/getPollsterChartData', function ($reques
             }
         }
     } catch (\GuzzleHttp\Exception\BadResponseException $exception) {
-        $vendorResponseBody = $exception->getResponse()->getBody();
+        $vendorResponseBody = $exception->getResponse()->getBody()->getContents();
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
         if (empty($vendorResponseBody)) {
             $result['contextWrites']['to']['status_msg'] = $exception->getResponse()->getReasonPhrase();
         } else {
-            $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+            $result['contextWrites']['to']['status_msg'] = $vendorResponseBody;
         }
     }
 

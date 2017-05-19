@@ -33,7 +33,7 @@ $app->post('/api/HuffingtonPostPollster/getTags', function ($request, $response)
         if (empty($vendorResponseBody)) {
             $result['contextWrites']['to']['status_msg'] = $exception->getResponse()->getReasonPhrase();
         } else {
-            $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+            $result['contextWrites']['to']['status_msg'] = $vendorResponseBody;
         }
     }
 

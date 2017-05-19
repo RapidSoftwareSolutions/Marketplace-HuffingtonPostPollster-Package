@@ -41,7 +41,7 @@ $app->post('/api/HuffingtonPostPollster/getSinglePoll', function ($request, $res
         if (empty($vendorResponseBody)) {
             $result['contextWrites']['to']['status_msg'] = $exception->getResponse()->getReasonPhrase();
         } else {
-            $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+            $result['contextWrites']['to']['status_msg'] = $vendorResponseBody;
         }
     }
 
