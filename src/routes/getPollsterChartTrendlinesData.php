@@ -14,7 +14,7 @@ $app->post('/api/HuffingtonPostPollster/getPollsterChartTrendlinesData', functio
         $postData = $validateRes;
     }
 
-    $url = $settings['apiUrl'] . "/charts/" . $postData['args']['slug'] . "pollster-trendlines.tsv";
+    $url = $settings['apiUrl'] . "/charts/" . $postData['args']['slug'] . "/pollster-trendlines.tsv";
 
     try {
         /** @var GuzzleHttp\Client $client */
