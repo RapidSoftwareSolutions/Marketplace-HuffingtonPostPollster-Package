@@ -24,7 +24,7 @@ $app->post('/api/HuffingtonPostPollster/getSingleQuestionCleanResponses', functi
         $vendorResponseBody = $vendorResponse->getBody()->getContents();
         if ($vendorResponse->getStatusCode() == 200) {
             $result['callback'] = 'success';
-            $result['contextWrites']['to'] = json_decode($vendorResponse->getBody());
+            $result['contextWrites']['to'] = $vendorResponseBody;
         }
         else {
             $result['callback'] = 'error';
