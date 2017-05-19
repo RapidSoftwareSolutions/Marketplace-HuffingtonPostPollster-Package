@@ -38,17 +38,24 @@ $app->post('/api/HuffingtonPostPollster/getCharts', function ($request, $respons
         if ($vendorResponse->getStatusCode() == 200) {
             $result['callback'] = 'success';
             $result['contextWrites']['to'] = json_decode($vendorResponse->getBody());
-        }
-        else {
+        } else {
             $result['callback'] = 'error';
             $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-            $result['contextWrites']['to']['status_msg'] = is_array($vendorResponseBody) ? $vendorResponseBody : json_decode($vendorResponseBody);
+            if (empty($vendorResponseBody)) {
+                $result['contextWrites']['to']['status_msg'] = $vendorResponse->getReasonPhrase();
+            } else {
+                $result['contextWrites']['to']['status_msg'] = is_array($vendorResponseBody) ? $vendorResponseBody : json_decode($vendorResponseBody);
+            }
         }
     } catch (\GuzzleHttp\Exception\BadResponseException $exception) {
         $vendorResponseBody = $exception->getResponse()->getBody();
         $result['callback'] = 'error';
         $result['contextWrites']['to']['status_code'] = 'API_ERROR';
-        $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+        if (empty($vendorResponseBody)) {
+            $result['contextWrites']['to']['status_msg'] = $exception->getResponse()->getReasonPhrase();
+        } else {
+            $result['contextWrites']['to']['status_msg'] = json_decode($vendorResponseBody);
+        }
     }
 
     return $response->withHeader('Content-type', 'application/json')->withStatus(200)->withJson($result);
