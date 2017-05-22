@@ -2,7 +2,7 @@
 
 # HuffingtonPostPollster Package
 HuffPost is an American journalism company that has both localized and international editions founded by Arianna Huffington, Kenneth Lerer, Jonah Peretti, and Andrew Breitbart, featuring columnists. The site offers news, satire, blogs, and original content and covers politics, business, entertainment, environment, technology, popular media, lifestyle, culture, comedy, healthy living, women's interests, and local news.
-* Domain: [HuffingtonpPost](http://elections.huffingtonpost.com)
+* Domain: [HuffingtonPostPollster](http://elections.huffingtonpost.com)
  
 ## HuffingtonPostPollster.getPolls
 A Poll on Pollster is a collection of questions and responses published by a reputable survey house. This endpoint provides raw data from the survey house, plus Pollster-provided metadata about each question. Pollster editors don’t include every question when they enter Polls, and they don’t necessarily enter every subpopulation for the responses they do enter. They make editorial decisions about which questions belong in the database.
