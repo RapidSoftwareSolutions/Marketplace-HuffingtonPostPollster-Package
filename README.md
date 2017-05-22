@@ -1,5 +1,7 @@
-[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/HuffingtonPostPollster/functions?utm_source=RapidAPIGitHub_HuffingtonPostPollsterFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)# HuffingtonPostPollster Package
+[![](https://scdn.rapidapi.com/RapidAPI_banner.png)](https://rapidapi.com/package/HuffingtonPostPollster/functions?utm_source=RapidAPIGitHub_HuffingtonPostPollsterFunctions&utm_medium=button&utm_content=RapidAPI_GitHub)
 
+# HuffingtonPostPollster Package
+HuffPost is an American journalism company that has both localized and international editions founded by Arianna Huffington, Kenneth Lerer, Jonah Peretti, and Andrew Breitbart, featuring columnists. The site offers news, satire, blogs, and original content and covers politics, business, entertainment, environment, technology, popular media, lifestyle, culture, comedy, healthy living, women's interests, and local news.
 * Domain: [HuffingtonpPost](http://elections.huffingtonpost.com)
  
 ## HuffingtonPostPollster.getPolls
