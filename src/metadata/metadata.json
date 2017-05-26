@@ -27,9 +27,14 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "Comma-separated list of Question tag names; only Polls containing Questions with any of the given tags will be returned.",
-          "required": false
+          "type": "List",
+          "info": "List of Question tag names; only Polls containing Questions with any of the given tags will be returned.",
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag"
+          }
         },
         {
           "name": "question",
@@ -89,13 +94,18 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "Comma-separated list of Question tag names. Only Questions with one or more of these tags will be returned.",
-          "required": false
+          "type": "List",
+          "info": "List of Question tag names. Only Questions with one or more of these tags will be returned.",
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag"
+          }
         },
         {
           "name": "electionDate",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Date of an election, in YYYY-MM-DD format. Only Questions pertaining to an election on this date will be returned.",
           "required": false
         }
@@ -189,13 +199,18 @@
         },
         {
           "name": "tags",
-          "type": "String",
-          "info": "Comma-separated list of tag slugs. Only Charts with one or more of these tags and Charts based on Questions with one or more of these tags will be returned.",
-          "required": false
+          "type": "List",
+          "info": "List of tag slugs. Only Charts with one or more of these tags and Charts based on Questions with one or more of these tags will be returned.",
+          "required": false,
+          "structure": {
+            "name": "tag",
+            "type": "String",
+            "info": "Tag"
+          }
         },
         {
           "name": "electionDate",
-          "type": "String",
+          "type": "DatePicker",
           "info": "Date of an election, in YYYY-MM-DD format. Only Charts based on Questions pertaining to an election on this date will be returned.",
           "required": false
         }

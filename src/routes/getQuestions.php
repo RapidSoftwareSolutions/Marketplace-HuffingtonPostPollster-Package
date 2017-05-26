@@ -21,11 +21,18 @@ $app->post('/api/HuffingtonPostPollster/getQuestions', function ($request, $resp
     if (isset($postData['args']['cursor']) && strlen($postData['args']['cursor']) > 0) {
         $param['cursor'] = $postData['args']['cursor'];
     }
-    if (isset($postData['args']['tags']) && strlen($postData['args']['tags']) > 0) {
-        $param['tags'] = $postData['args']['tags'];
+    if (!empty($postData['args']['tags'])) {
+        if (is_array($postData['args']['tags'])) {
+            $tags = implode(',', $postData['args']['tags']);
+        }
+        else {
+            $tags = $postData['args']['tags'];
+        }
+        $param['tags'] = $tags;
     }
     if (isset($postData['args']['electionDate']) && strlen($postData['args']['electionDate']) > 0) {
-        $param['election_date'] = $postData['args']['election_date'];
+        $date = new DateTime($postData['args']['electionDate']);
+        $param['election_date'] = $date->format('Y-m-d');
     }
 
     try {

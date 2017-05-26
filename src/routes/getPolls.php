@@ -21,8 +21,14 @@ $app->post('/api/HuffingtonPostPollster/getPolls', function ($request, $response
     if (isset($postData['args']['cursor']) && strlen($postData['args']['cursor']) > 0) {
         $param['cursor'] = $postData['args']['cursor'];
     }
-    if (isset($postData['args']['tags']) && strlen($postData['args']['tags']) > 0) {
-        $param['tags'] = $postData['args']['tags'];
+    if (!empty($postData['args']['tags'])) {
+        if (is_array($postData['args']['tags'])) {
+            $tags = implode(',', $postData['args']['tags']);
+        }
+        else {
+            $tags = $postData['args']['tags'];
+        }
+        $param['tags'] = $tags;
     }
     if (isset($postData['args']['question']) && strlen($postData['args']['question']) > 0) {
         $param['question'] = $postData['args']['tags'];

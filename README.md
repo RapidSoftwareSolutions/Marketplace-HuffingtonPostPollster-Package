@@ -8,7 +8,7 @@ A Poll on Pollster is a collection of questions and responses published by a rep
 | Field   | Type  | Description
 |---------|-------|----------
 | cursor  | String| Special string to index into the Array
-| tags    | String| Comma-separated list of Question tag names; only Polls containing Questions with any of the given tags will be returned.
+| tags    | Array | List of Question tag names; only Polls containing Questions with any of the given tags will be returned.
 | question| String| Question slug; only Polls that ask that Question will be returned.
 | sort    | String| If updated_at, sort the most recently updated Poll first. (This can cause race conditions when used with cursor.) Otherwise, sort by most recently entered Poll first.
 
@@ -25,7 +25,7 @@ Returns a list of Questions.
 | Field       | Type  | Description
 |-------------|-------|----------
 | cursor      | String| Special string to index into the Array
-| tags        | String| Comma-separated list of Question tag names. Only Questions with one or more of these tags will be returned.
+| tags        | Array | List of Question tag names. Only Questions with one or more of these tags will be returned.
 | electionDate| String| Date of an election, in YYYY-MM-DD format. Only Questions pertaining to an election on this date will be returned.
 
 ## HuffingtonPostPollster.getSingleQuestion
@@ -55,7 +55,7 @@ Returns a list of Charts, ordered by creation date (newest first). A Chart is ch
 | Field       | Type  | Description
 |-------------|-------|----------
 | cursor      | String| Special string to index into the Array
-| tags        | String| Comma-separated list of tag slugs. Only Charts with one or more of these tags and Charts based on Questions with one or more of these tags will be returned.
+| tags        | Array | List of tag slugs. Only Charts with one or more of these tags and Charts based on Questions with one or more of these tags will be returned.
 | electionDate| String| Date of an election, in YYYY-MM-DD format. Only Charts based on Questions pertaining to an election on this date will be returned.
 
 ## HuffingtonPostPollster.getSingleChart
